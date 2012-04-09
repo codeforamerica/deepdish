@@ -30,8 +30,8 @@
 
 {% block js %}
   <script src="http://code.leafletjs.com/leaflet-0.3.1/leaflet.js"></script>
-  <script type="text/javascript" src="http://vizzuality.github.com/cartodb-leaflet/wax.leaflet.min.js"></script>
-  <script type="text/javascript" src="http://vizzuality.github.com/cartodb-leaflet/cartodb-leaflet.js"></script>
+  $<script type="text/javascript" src="http://vizzuality.github.com/cartodb-leaflet/wax.leaflet.min.js"></script>
+  <script type="text/javascript" src="/static/cartodb-leaflet/cartodb-leaflet.js"></script>
   <script type="text/javascript">
   $(document).ready(function() {
     {% raw %}
@@ -50,12 +50,22 @@
     map.addLayer(cloudmade);
     map.setView(mapCenter, mapZoom);
     var cartodb_leaflet = new L.CartoDBLayer({
+      show_cartodb_logo: false,
       map_canvas: 'map',
       map: map,
       user_name:'boundsj',
       table_name: 'food_inspections',
       query: "SELECT cartodb_id, the_geom_webmercator, aka_name FROM {{table_name}}",
-      tile_style: "#{{table_name}}{marker-fill:red}",
+      tile_style: "#{{table_name}} {" + 
+                     "marker-fill:#FF6600;" + 
+                     "marker-line-color:white;" +
+                     "marker-line-width:3;" + 
+                     "marker-opacity:1;" + 
+                     "marker-line-opacity:1;" + 
+                     "marker-placement:point;" + 
+                     "marker-type:ellipse;" +
+                     "marker-allow-overlap:true;" + 
+                  "}",
       infowindow: "SELECT cartodb_id, the_geom_webmercator, aka_name as Name, address as Address, " +
          "facility_type as Type, " +
          "violations as Violations, results " +

@@ -1,0 +1,3 @@
+[submodule "static/cartodb-leaflet"]
+	path = static/cartodb-leaflet
+	url = git@github.com:boundsj/cartodb-leaflet.git

@@ -13,6 +13,11 @@ First, you'll need to clone the repo.
     $ git clone git@github.com:boundsj/deepdish.git 
     $ cd deepdish 
 
+A forked repo of cartodb-leaflet is a submodule of deepdish. It's forked because (as of 4/9/2012) the cartodb repo does not handle touchevents so a solution for that is in the fork of cartodb-leaflet that this project uses. So, to set it up, run:
+
+    $ git submodule init
+    $ git submodule update
+
 Second, let's download `pip`, `virtualenv`, `foreman`, and the [`heroku`
 Ruby gem](http://devcenter.heroku.com/articles/using-the-cli).
 
