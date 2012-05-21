@@ -1,9 +1,9 @@
 {% extends "base.html" %}
 
 {% block css %}
-  <link rel="stylesheet" href="http://code.leafletjs.com/leaflet-0.3.1/leaflet.css">
-  <link rel="stylesheet" href="http://code.leafletjs.com/leaflet-0.3.1/leaflet.ie.css">
-  <link href="http://vizzuality.github.com/cartodb-leaflet/cartodb.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/static/css/leaflet.css">
+  <link rel="stylesheet" href="/static/css/leaflet.ie.css">
+  <link rel="stylesheet" href="/static/css/cartodb-leaflet.css" type="text/css">
   <style>
     body {
       padding: 0;
@@ -29,8 +29,8 @@
 {% endblock %}
 
 {% block js %}
-  <script src="http://code.leafletjs.com/leaflet-0.3.1/leaflet.js"></script>
-  $<script type="text/javascript" src="http://vizzuality.github.com/cartodb-leaflet/wax.leaflet.min.js"></script>
+  <script type="text/javascript" src="/static/js/leaflet.js"></script>
+  <script type="text/javascript" src="/static/js/wax.leaflet.min.js"></script>
   <script type="text/javascript" src="/static/cartodb-leaflet/cartodb-leaflet.js"></script>
   <script type="text/javascript">
   $(document).ready(function() {
@@ -79,7 +79,7 @@
 
 {% block main %}
   <div id="map"></div>
-    <a href="https://github.com/boundsj/deepdish"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://a248.e.akamai.net/assets.github.com/img/e6bef7a091f5f3138b8cd40bc3e114258dd68ddf/687474703a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f7265645f6161303030302e706e67" alt="Fork me on GitHub"></a>
+    <a href="http://rebounds.net"><script src="http://boundsj.github.com/cfa_banner/banner.js?type=corner-right&forkUrl=https://github.com/codeforamerica/deepdish" id="cfa_banner_script"></script></a>
     <div style="position:absolute; right:65px; top:10px;">
       <h2>deepdish</h2>
       <div id="search">search for:<input id="search_input" type="text" name="search" /></div>
